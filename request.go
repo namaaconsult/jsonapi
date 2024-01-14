@@ -378,7 +378,15 @@ func assignValue(field, value reflect.Value) {
 	case reflect.Bool:
 		field.SetBool(value.Bool())
 	default:
-		field.Set(value)
+		vType := field.Type()
+		if value.Type().AssignableTo(vType) {
+			field.Set(value)
+		} else if value.CanConvert(vType) {
+			field.Set(value.Convert(vType))
+		} else {
+			// we panicing. brrrrrrrrr
+			panic("Can't set value to field")
+		}
 	}
 }
 

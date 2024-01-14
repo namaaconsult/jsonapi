@@ -399,7 +399,8 @@ func unmarshalAttribute(
 	fieldType := structField.Type
 
 	// Handle field of type []string
-	if fieldValue.Type() == reflect.TypeOf([]string{}) {
+	if fieldValue.Type().Kind() == reflect.Slice &&
+		reflect.TypeOf(fieldValue.Interface()).Elem().Kind() == reflect.String {
 		value, err = handleStringSlice(attribute)
 		return
 	}

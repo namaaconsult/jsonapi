@@ -1,19 +1,12 @@
 # jsonapi
 
-[![Build Status](https://travis-ci.org/google/jsonapi.svg?branch=master)](https://travis-ci.org/google/jsonapi)
-[![Go Report Card](https://goreportcard.com/badge/github.com/google/jsonapi)](https://goreportcard.com/report/github.com/google/jsonapi)
-[![GoDoc](https://godoc.org/github.com/google/jsonapi?status.svg)](http://godoc.org/github.com/google/jsonapi)
-[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
-
-A serializer/deserializer for JSON payloads that comply to the
-[JSON API - jsonapi.org](http://jsonapi.org) spec in go.
-
+**FORK INTENDED FOR PERSONAL USE**
 
 
 ## Installation
 
 ```
-go get -u github.com/google/jsonapi
+go get -u github.com/salmanjnr/jsonapi
 ```
 
 Or, see [Alternative Installation](#alternative-installation).

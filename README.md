@@ -1,6 +1,6 @@
 # jsonapi
 
-**FORK INTENDED FOR PERSONAL USE**
+**FORK INTENDED FOR INTERNAL USE**
 
 
 ## Installation

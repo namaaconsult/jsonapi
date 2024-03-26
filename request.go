@@ -411,8 +411,9 @@ func unmarshalAttribute(
 		return
 	}
 
-	// Handle field of type struct
-	if fieldValue.Type().Kind() == reflect.Struct {
+	// Handle field of type struct or pointer to struct
+	if fieldValue.Type().Kind() == reflect.Struct ||
+		fieldValue.Type().Kind() == reflect.Pointer && fieldValue.Type().Elem().Kind() == reflect.Struct {
 		value, err = handleStruct(attribute, fieldValue)
 		return
 	}
